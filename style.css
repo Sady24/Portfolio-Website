@@ -1,0 +1,443 @@
+/*----------------------------------------BODY----------------------------------------*/
+body, html {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  margin: 0px;
+  padding: 0%; 
+}
+.parallax {
+  /* Full height */
+  height: 100%; 
+  
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+@font-face {
+  font-family: Font;
+  src: url(MavenPro-VariableFont_wght.ttf);
+}
+ 
+/*---------------------------------------- Button----------------------------------------*/
+.Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .3s;
+  
+}
+.svgContainer {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all .3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #181818;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all .3s;
+}
+.Btn:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: center;
+}
+.Btn:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+  backdrop-filter: blur(4px);
+}
+/*----------------------------------------Social Media Button----------------------------------------*/
+
+
+
+
+.icon {
+  text-decoration: none;
+  color: white;
+  display: block;
+  justify-content: center; 
+  align-items: center;
+  position:absolute ;
+}
+.layer {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+}
+.icon:hover .layer {
+  transform: rotate(-35deg) skew(20deg);
+}
+.layer span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.layer span,
+.text {
+  color: white;
+  border-color: white;
+  
+}
+
+.icon:hover.layer span {
+  box-shadow: -1px 1px 3px white;
+}
+.icon .text {
+
+
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  opacity: 0;
+  font-weight: 500;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+.icon:hover .text {
+  bottom: -35px;
+  opacity: 1;
+}
+
+.icon:hover .layer span:nth-child(1) {
+  opacity: 0.2;
+}
+.icon:hover .layer span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+.icon:hover .layer span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+.icon:hover .layer span:nth-child(4) {
+  opacity: 0.8;
+  transform: translate(15px, -15px);
+}
+.icon:hover .layer span:nth-child(5) {
+  opacity: 1;
+  transform: translate(20px, -20px);
+}
+
+.layer span.fab {
+  font-size: 30px;
+  line-height: 64px;
+  text-align: center;
+  fill: white;
+  background: #000;
+}
+/*-----------------------footer--------------------------------------*/
+.footer {
+  /* Full height */
+  height: 250px; 
+  
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*-----------------------social icons box--------------------------------------*/
+.socialicons{
+  display: flex;
+  justify-content: center;
+}
+
+/*-----------------------header--------------------------------------*/
+
+header{
+  background: #181818;
+}
+.container{
+ max-width: 100%;
+ margin: 0% auto;
+ width: 100%;
+ padding: 0rem 1.5rem;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+
+}
+/*-----------------------button2--------------------------------------*/
+
+
+.fancy {
+  background-color: transparent;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 1.25em 2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+ }
+ 
+ .fancy::before {
+  content: " ";
+  background: black;
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+ }
+ 
+ 
+ 
+ .fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+ }
+ 
+ .fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+ }
+ 
+ .fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+ }
+ 
+ .fancy:hover {
+  color: white;
+  background: black;
+ }
+ 
+ .fancy:hover::before {
+  width: 0.9375rem;
+  background: white;
+ }
+ 
+ .fancy:hover .text {
+  color: white;
+  padding-left: 1.5em;
+ }
+ 
+ .fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+ }
+ 
+ .fancy:hover .bottom-key-1,
+  .fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+ }
+ .ui-btn {
+ 
+   --btn-transition: .3s;
+   --btn-letter-spacing: .1rem;
+   --btn-animation-duration: .3s;
+   /*--btn-shadow-color: rgba(0, 0, 0, 0.137);*/
+   --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+   --hover-btn-color: white;
+   --default-btn-color: teal;
+   --font-size: 34px;
+   /* 👆 this field should not be empty */
+   --font-weight: 600;
+   --font-family: Menlo,Roboto Mono,monospace;
+   /* 👆 this field should not be empty */
+ }
+ 
+ /* button settings 👆 */
+ 
+ .ui-btn {
+   box-sizing: border-box;
+   padding: var(--btn-padding);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: var(--default-btn-color);
+   font: var(--font-weight) var(--font-size) var(--font-family);
+   background: var(--btn-default-bg);
+   border: none;
+   cursor: pointer;
+   transition: var(--btn-transition);
+   overflow: hidden;
+   box-shadow: var(--btn-shadow);
+ }
+ 
+ .ui-btn span {
+   letter-spacing: var(--btn-letter-spacing);
+   transition: var(--btn-transition);
+   box-sizing: border-box;
+   position: relative;
+   background: inherit;
+ }
+ 
+ .ui-btn span::before {
+   box-sizing: border-box;
+   position: absolute;
+   content: "";
+   background: inherit;
+ }
+ 
+ .ui-btn:hover, .ui-btn:focus {
+   background: var(--btn-hover-bg);
+ }
+ 
+ .ui-btn:hover span, .ui-btn:focus span {
+   color: var(--hover-btn-color);
+ }
+ 
+ .ui-btn:hover span::before, .ui-btn:focus span::before {
+   animation: chitchat linear both var(--btn-animation-duration);
+ }
+ 
+ @keyframes chitchat {
+   0% {
+     content: "#";
+   }
+ 
+   5% {
+     content: ".";
+   }
+ 
+   10% {
+     content: "^{";
+   }
+ 
+   15% {
+     content: "-!";
+   }
+ 
+   20% {
+     content: "#$_";
+   }
+ 
+   25% {
+     content: "№:0";
+   }
+ 
+   30% {
+     content: "#{+.";
+   }
+ 
+   35% {
+     content: "@}-?";
+   }
+ 
+   40% {
+     content: "?{4@%";
+   }
+ 
+   45% {
+     content: "=.,^!";
+   }
+ 
+   50% {
+     content: "?2@%";
+   }
+ 
+   55% {
+     content: "\;1}]";
+   }
+ 
+   60% {
+     content: "?{%:%";
+     right: 0;
+   }
+ 
+   65% {
+     content: "|{f[4";
+     right: 0;
+   }
+ 
+   70% {
+     content: "{4%0%";
+     right: 0;
+   }
+ 
+   75% {
+     content: "'1_0<";
+     right: 0;
+   }
+ 
+   80% {
+     content: "{0%";
+     right: 0;
+   }
+ 
+   85% {
+     content: "]>'";
+     right: 0;
+   }
+ 
+   90% {
+     content: "4";
+     right: 0;
+   }
+ 
+   95% {
+     content: "2";
+     right: 0;
+   }
+ 
+   100% {
+     content: "";
+     right: 0;
+   }
+ }
